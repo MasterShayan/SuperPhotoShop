@@ -1,0 +1,9 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<h1>There is a problem with your inputs, usually it's the crop values, please check them and try again</h1> 
+<form action="." method='POST' enctype='multipart/form-data'> {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="apply">
+</form>
+{% endblock  %}

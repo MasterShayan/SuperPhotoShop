@@ -1,0 +1,10 @@
+{% extends 'base_layout.html' %}
+
+    {% block content %}
+        <h1>Welcome to my legendary app for editing and viewing photos</h1>
+        <h1>This was the source for Adobe Photoshop (just in case you didn't know it)</h1>
+        <br>
+        <h3> <a href="{% url 'photo:list' %}"> Click here to see the shared photos</a></h3>
+        <br>
+        <h3><a href="{% url 'photo:upload' %}"> Click here to upload photo </a>  </h3>
+    {% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+
+    {% block content %}
+        <h1>This is the list of our photos</h1>
+        <br>
+        <div class="photo">
+            {% for phot in photos %}
+                {% if phot.Share %}
+                <div class="photos">
+                    <h2><a href="{% url 'photo:detail' slug=phot.slug %}">{{ phot.title }}<img src="{{ phot.photo.url }}" class="img-responsive" style="width: 10%; float; left; margin-right: 10px;"/> </a> </h3>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <br>
+    {% endblock %}
